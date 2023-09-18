@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var x = [5]int{1, 2, 3, 4, 5}
+
+	crescente := true
+	for i := 0; i < len(x)-1; i++ {
+		atual := x[i]
+		prox := x[i+1]
+		if atual >= prox {
+			crescente = false
+			break
+		}
+	}
+	if crescente {
+		fmt.Println(`O array está ordenado`)
+	} else {
+		fmt.Println(`O array está desordenado`)
+	}
+}

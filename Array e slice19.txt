@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var n int
+	fmt.Print("Informe o tamanho: ")
+	fmt.Scan(&n)
+
+	x := make([]int, n)
+	y := make([]int, n)
+	z := make([]int, n)
+
+	for i := 0; i < n; i++ {
+		fmt.Println("Informe os elementos do primeiro array: ")
+		fmt.Scan(&x[i])
+	}
+
+	for i := 0; i < n; i++ {
+		fmt.Println("Informe os elementos do segundo array:")
+		fmt.Scan(&y[i])
+	}
+
+	for i := 0; i < n; i++ {
+		z[i] = x[i] + y[i]
+	}
+
+	fmt.Println("Soma dos arrays:", z)
+}
